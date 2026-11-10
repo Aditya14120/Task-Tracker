@@ -1,0 +1,6 @@
+{
+  "name": "Spider-Task: Web-Slinger To-Do List",
+  "description": "A high-octane comic book styled Spider-Man to-do list with web-shooter completion animations, Spider-Sense priority alerts, multi-suit themes, and NYC patrol districts.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

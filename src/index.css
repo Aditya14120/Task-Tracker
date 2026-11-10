@@ -1,0 +1,87 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --font-comic: 'Bangers', cursive, sans-serif;
+    --font-heading: 'Bricolage Grotesque', sans-serif;
+    --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  }
+}
+
+.font-comic {
+  font-family: 'Bangers', cursive, sans-serif;
+  letter-spacing: 0.05em;
+}
+
+.font-heading {
+  font-family: 'Bricolage Grotesque', sans-serif;
+}
+
+/* Spider-Sense Tingling Wave Animation */
+@keyframes spider-sense-pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7), 0 0 0 0 rgba(234, 179, 8, 0.7);
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 0 0 0 6px rgba(239, 68, 68, 0.3), 0 0 0 12px rgba(234, 179, 8, 0.15);
+    transform: scale(1.01);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(239, 68, 68, 0), 0 0 0 0 rgba(234, 179, 8, 0);
+    transform: scale(1);
+  }
+}
+
+.spider-sense-glow {
+  animation: spider-sense-pulse 2s infinite ease-in-out;
+}
+
+/* Comic Halftone Dot Pattern */
+.bg-comic-dots {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.08) 1.5px, transparent 1.5px);
+  background-size: 16px 16px;
+}
+
+.bg-comic-dots-red {
+  background-image: radial-gradient(rgba(225, 29, 72, 0.15) 1.5px, transparent 1.5px);
+  background-size: 16px 16px;
+}
+
+/* Comic Action Bubble Pop */
+@keyframes comic-pop {
+  0% {
+    transform: scale(0.4) rotate(-12deg);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.15) rotate(4deg);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1) rotate(-3deg);
+    opacity: 1;
+  }
+}
+
+.animate-comic-pop {
+  animation: comic-pop 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+/* Web Cocoon / Cross-stitch pattern for completed tasks */
+.web-cocoon {
+  background-image: repeating-linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.03),
+    rgba(255, 255, 255, 0.03) 6px,
+    transparent 6px,
+    transparent 12px
+  );
+}
+
+/* Comic Web Strand Graphic line */
+.web-line {
+  background-image: radial-gradient(circle, #fff 10%, transparent 15%);
+  background-size: 8px 8px;
+}
